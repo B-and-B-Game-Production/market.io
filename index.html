@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+            text-align: center;
+            background-color: #cacfd9;
+        }
+        .kapusta {
+            position: relative;
+            width: 300px;
+            height: 450px;
+            font-size: 16px;
+			background-image:url("em270t763t2uhfiv1xmrgrwbyrmp29hk.jpeg");
+			background-size:290px 390px;
+			background-position:4px 4px;
+			background-repeat:no-repeat;
+			
+        }
+        .kapusta span {
+            position: absolute;
+            bottom: 0; /* Align text to the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tomate {
+            position: relative;
+            top:10px;
+            width: 300px;
+            height: 450px;
+            font-size: 16px;
+            background-image: url("tomate.jpg");
+            background-size: 290px 350px;
+            background-position: 4px 4px;
+            background-repeat: no-repeat;
+        }
+        .tomate span {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+    <title>Помидоры и капуста</title>
+</head>
+<body>
+
+    <div>
+        <p><h1>Добро пожаловать</h1> самый выгодный магазин помидор и капусты!</p>
+    </div>
+    <div>
+        <button class="kapusta" onclick="KaufKapusta()"><span>Капуста по самой назкой цене купить</span></button>
+    </div>
+    <div>
+        <button class="tomate" onclick="KaufTomate()"><span>Помидоры по самой низкой цене купить</span></button>
+    </div>
+    <script>
+        function KaufKapusta() {
+            var amoutKapusta = prompt("Капуста по цене 567грн кило. Сколько вам нужно?");
+            var prise = 567;
+            if (amoutKapusta == null) {
+                alert("Вы отменили заказ")
+            }
+            else {
+                
+                alert("Подтвердите ваш заказ - Капуста: " + amoutKapusta + " кил. Цена = " + prise * amoutKapusta + " ₴");
+            }
+
+            
+
+        }
+        function KaufTomate() {
+            var prise = 455;
+            var amoutTomate = prompt("Помидоры по цене 455грн кило. Сколько вам нужно?");
+            if (amoutTomate == null) {
+                alert("Вы отменили заказ")
+            }
+            else {
+                alert("Подтвердите ваш заказ - Помидоры: " + amoutTomate + " кил. Цена = " + prise * amoutTomate + " ₴");
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
