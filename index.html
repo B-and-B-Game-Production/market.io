@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+            text-align: center;
+            background-color: #cacfd9;
+        }
+        .kapusta {
+            position: relative;
+            width: 300px;
+            height: 450px;
+            font-size: 16px;
+			background-image:url("em270t763t2uhfiv1xmrgrwbyrmp29hk.jpeg");
+			background-size:290px 390px;
+			background-position:4px 4px;
+			background-repeat:no-repeat;
+			
+        }
+        .kapusta span {
+            position: absolute;
+            bottom: 0; /* Align text to the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tomate {
+            position: relative;
+            top:10px;
+            width: 300px;
+            height: 450px;
+            font-size: 16px;
+            background-image: url("tomate.jpg");
+            background-size: 290px 350px;
+            background-position: 4px 4px;
+            background-repeat: no-repeat;
+        }
+        .tomate span {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .backgr{
+            position:absolute;
+            left:50%;
+            transform: translateX(-50%);
+            width:450px;
+            height:1050px;
+            background-color:rgb(235 235 235);
+        }
+        .shadow{
+            position:absolute;
+            display: none;
+            width:100%;
+            height:1050px;
+            background-color:rgba(0, 0, 0, 0.70);
+
+        }
+        .kaufWind{
+            position:absolute;
+            display: none;
+            width: 450px;
+            height: 450px;
+            background-color:aliceblue;
+            border-radius:15px;
+            left:50%;
+            top:30%;
+            transform: translateX(-50%);
+        }
+        #num {
+            position: absolute;
+            transform: translateX(-52%);
+            top: 30%;
+            width:250px;
+            height:50px;
+            border-width:3px;
+            border-radius:15px;
+            font-size:30px;
+        }
+        .gui{
+            position:absolute;
+            top:40%;
+            left:48%;
+            transform: translateX(-50%)
+        }
+    </style>
+    <title>Помидоры и капуста</title>
+</head>
+<body>
+
+    <div class="backgr">
+        <p><h1>Добро пожаловать</h1> самый выгодный магазин помидор и капусты!</p>
+        <div>
+            <button class="kapusta" onclick="KaufKapusta()"><span>Капуста по самой назкой цене купить</span></button>
+        </div>
+        <div>
+            <button class="tomate" onclick="KaufTomate()"><span>Помидоры по самой низкой цене купить</span></button>
+        </div>
+        <p>Внимание! Продавец сам в ахуе от этих цен.</p>
+    </div>
+    <div class="shadow" id="shad">
+
+    </div>
+    <div class="kaufWind" id="kaufWind">
+        <p id="texter">Введите сумму которую хотите преобрести <br /> <h1>567 Гривен за кило</h1></p>
+        <p>
+            <input type="number" id="num" />
+        </p>
+        
+        <p class="gui">
+            <button><span>Отмена</span></button>
+            <button><span>Купить</span></button>
+        </p>
+        
+    </div>
+
+
+    <script>
+        function KaufKapusta() {
+            var shad = document.getElementById("shad");
+            var kaWind = document.getElementById("kaufWind");
+            kaWind.style.display = "block";
+            shad.style.display = "block";
+
+
+            var prise = 567;
+
+        }
+        function KaufTomate() {
+            var prise = 455;
+        }
+    </script>
+
+</body>
+</html>
