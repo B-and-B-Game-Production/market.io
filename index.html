@@ -111,8 +111,8 @@
         </p>
         
         <p class="gui">
-            <button><span>Отмена</span></button>
-            <button><span>Купить</span></button>
+            <button id="cancel" onclick="Cancel()"><span>Отмена</span></button>
+            <button id="kauf" onclick="Kauf()"><span>Купить</span></button>
         </p>
         
     </div>
@@ -124,7 +124,7 @@
             var kaWind = document.getElementById("kaufWind");
             kaWind.style.display = "block";
             shad.style.display = "block";
-
+	    
 
             var prise = 567;
 
@@ -132,6 +132,12 @@
         function KaufTomate() {
             var prise = 455;
         }
+	function Cancel(){
+	    alert("Эта функция в режиме разработки. Скоро!")
+	}
+	function Kauf(){
+	    alert("Эта функция в режиме разработки. Скоро!")
+	}
     </script>
 
 </body>
