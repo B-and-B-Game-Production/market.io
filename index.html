@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <style>
         body {
             margin: 0 auto;
@@ -105,12 +105,12 @@
 
     </div>
     <div class="kaufWind" id="kaufWind">
-        <p id="texter">Введите сумму которую хотите преобрести <br /> <h1>567 Гривен за кило</h1></p>
+        <p id="texter">Введите сумму которую хотите преобрести <br /> <h1 id="count">567 Гривен за кило</h1></p>
         <p>
             <input type="number" id="num" />
         </p>
         
-        <p class="gui">
+        <p class="gui" id="gui">
             <button id="cancel" onclick="Cancel()"><span>Отмена</span></button>
             <button id="kauf" onclick="Kauf()"><span>Купить</span></button>
         </p>
@@ -124,21 +124,42 @@
             var kaWind = document.getElementById("kaufWind");
             kaWind.style.display = "block";
             shad.style.display = "block";
-	    
 
-            var prise = 567;
+
+          
 
         }
         function KaufTomate() {
             var prise = 455;
-	    alert("Товара нет!")
         }
-	function Cancel(){
-	    alert("Эта функция в режиме разработки. Скоро!")
-	}
-	function Kauf(){
-	    alert("Эта функция в режиме разработки. Скоро!")
-	}
+        function Cancel() {
+            var shad = document.getElementById("shad");
+            var kaWind = document.getElementById("kaufWind");
+            kaWind.style.display = "none";
+            shad.style.display = "none";
+        }
+        var point = 0;
+        function Kauf() {
+            
+            var prise = 567;
+            var tex = document.getElementById("texter");
+            var count = document.getElementById("count");
+            var nums = document.getElementById("num");
+            var gui = document.getElementById("gui");
+            var num = document.getElementById("num").value;
+            var amout = num * prise;
+            tex.innerText = "Вы Уверены? Может зотите взять больше"
+            count.innerText = amout + "₴";
+            if (point >= 1) {
+                nums.style.display = "none"
+                gui.style.display = "none"
+                tex.innerText = "Супер!"
+                count.innerText = "Спасибо за попкупку!"
+            }
+            else {
+                point++;
+            }
+        }
     </script>
 
 </body>
